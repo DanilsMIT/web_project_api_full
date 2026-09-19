@@ -5,9 +5,23 @@ class BadRequestError extends Error {
   }
 }
 class UnauthorizedError extends Error {
-  constructor(message = "Datos no coinciden") {
+  constructor(message = "Datos no coinciden o no autorizados") {
     super(message);
     this.statusCode = 401;
+  }
+}
+
+class ForbiddenError extends Error {
+  constructor(message = "Estos datos no te pertenecen") {
+    super(message);
+    this.statusCode = 403;
+  }
+}
+
+class notFoundError extends Error {
+  constructor(message = "Recurso no encontrado") {
+    super(message);
+    this.statusCode = 404;
   }
 }
 
@@ -18,4 +32,10 @@ class ConflictError extends Error {
   }
 }
 
-module.exports = { BadRequestError, UnauthorizedError, ConflictError };
+module.exports = {
+  BadRequestError,
+  UnauthorizedError,
+  ForbiddenError,
+  notFoundError,
+  ConflictError,
+};

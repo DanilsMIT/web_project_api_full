@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     default: "Jacques Cousteau",
     minlength: 2,
-    maxlength: 15,
+    maxlength: 30,
   },
   about: {
     type: String,
