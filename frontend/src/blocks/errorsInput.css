@@ -1,0 +1,12 @@
+.popup__input-error_active {
+  display: block;
+  color: red;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.button__disabled {
+  background-color: white;
+  border: 1px solid #000000;
+  color: gray;
+}
