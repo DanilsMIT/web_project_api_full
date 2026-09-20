@@ -1,5 +1,5 @@
-import PopUpImage from "../pop/ImagePopup/ImagePopup.jsx";
-import RemoveCard from "../pop/RemoveCard/RemoveCard.jsx";
+import PopUpImage from "../popup/ImagePopup/ImagePopup.jsx";
+import RemoveCard from "../popup/RemoveCard/RemoveCard.jsx";
 import placeholder from "../../images/placeholder.jpg";
 import { useContext } from "react";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext.js";

@@ -7,7 +7,7 @@ import MainLayout from "./Layout/MainLayout.jsx";
 import ScreenLoader from "./ScreenLoader/ScreenLoader.jsx";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import API from "../utils/api.js";
-import Popup from "./pop/Popup.jsx";
+import Popup from "./popup/Popup.jsx";
 import Main from "./Main/Main.jsx";
 import Register from "./Auth/Register/Register.jsx";
 import Login from "./Auth/Login/Login.jsx";
@@ -18,7 +18,7 @@ import { CurrentUserContext } from "../contexts/CurrentUserContext.js";
 import ProtectedRoute from "./Auth/ProtectedRoute/ProtectedRoute.jsx";
 //Auth
 import * as auth from "../utils/auth.js";
-import InfoTooltip from "./pop/InfoTooltip/InfoTooltip.js";
+import InfoTooltip from "./popup/InfoTooltip/InfoTooltip.js";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);

@@ -1,12 +1,12 @@
 import { useContext } from "react";
 ///Componentes
-import Popup from "../pop/Popup.jsx";
+import Popup from "../popup/Popup.jsx";
 import ScreenLoader from "../ScreenLoader/ScreenLoader.jsx";
 import API from "../../utils/api.js";
 //Forms
-import NewCardForm from "../pop/NewCard/NewCard.js";
-import EditProfileForm from "../pop/EditProfile/EditProfile.js";
-import EditAvatar from "../pop/EditAvatar/EditAvatar.js";
+import NewCardForm from "../popup/NewCard/NewCard.js";
+import EditProfileForm from "../popup/EditProfile/EditProfile.js";
+import EditAvatar from "../popup/EditAvatar/EditAvatar.js";
 //Objetos
 import Card from "../Card/Card.jsx";
 //Contexto
