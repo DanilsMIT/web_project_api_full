@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import InfoTooltip from "../../popup/InfoTooltip/InfoTooltip";
+import InfoTooltip from "../../pop/InfoTooltip/InfoTooltip";
 
 export default function Login({ handleLogin }) {
   //inputs
