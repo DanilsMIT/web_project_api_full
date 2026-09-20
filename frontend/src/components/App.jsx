@@ -18,7 +18,7 @@ import { CurrentUserContext } from "../contexts/CurrentUserContext.js";
 import ProtectedRoute from "./Auth/ProtectedRoute/ProtectedRoute.jsx";
 //Auth
 import * as auth from "../utils/auth.js";
-import InfoTooltip from "./popup/InfoTooltip/InfoTooltip.js";
+import InfoTooltip from "./popup/InfoTooltip/InfoTooltip.jsx";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
