@@ -4,9 +4,9 @@ import Popup from "../popup/Popup.jsx";
 import ScreenLoader from "../ScreenLoader/ScreenLoader.jsx";
 import API from "../../utils/api.js";
 //Forms
-import NewCardForm from "../popup/NewCard/NewCard.js";
-import EditProfileForm from "../popup/EditProfile/EditProfile.js";
-import EditAvatar from "../popup/EditAvatar/EditAvatar.js";
+import NewCardForm from "../popup/NewCard/NewCard.jsx";
+import EditProfileForm from "../popup/EditProfile/EditProfile.jsx";
+import EditAvatar from "../popup/EditAvatar/EditAvatar.jsx";
 //Objetos
 import Card from "../Card/Card.jsx";
 //Contexto
