@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
 const { UnauthorizedError } = require("../errors/responseErrors");
+const { NODE_ENV, JWT_SECRET } = process.env;
 
 const auth = (req, res, next) => {
   const { authorization } = req.headers;
@@ -10,7 +11,10 @@ const auth = (req, res, next) => {
   const vipToken = authorization.replace("Bearer ", "");
   let payload;
   try {
-    payload = jwt.verify(vipToken, "vip-token");
+    payload = jwt.verify(
+      vipToken,
+      NODE_ENV === "production" ? JWT_SECRET : "vip-token",
+    );
   } catch (err) {
     return next(new UnauthorizedError());
   }

@@ -1,6 +1,7 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/user");
+const { NODE_ENV, JWT_SECRET } = process.env;
 const {
   BadRequestError,
   UnauthorizedError,
@@ -46,7 +47,11 @@ const loginUser = async (req, res, next) => {
   try {
     const { email, password } = req.body;
     const user = await User.findUserByCredentials(email, password);
-    const token = jwt.sign({ _id: user._id }, "vip-token", { expiresIn: "7d" });
+    const token = jwt.sign(
+      { _id: user._id },
+      NODE_ENV === "production" ? JWT_SECRET : "vip-token",
+      { expiresIn: "7d" },
+    );
     res.send({ token });
   } catch {
     return next(new UnauthorizedError());
