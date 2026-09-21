@@ -15,6 +15,7 @@ const auth = require("./middlewares/auth");
 const app = express();
 const PORT = 3001;
 app.use(cors());
+app.options("*", cors());
 mongoose.connect("mongodb://localhost:27017/aroundMongoose");
 app.use(express.json());
 app.use(requestLogger);
