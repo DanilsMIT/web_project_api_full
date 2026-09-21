@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 export default function NewCardForm(propiedades) {
   const { handlePostCard } = propiedades;

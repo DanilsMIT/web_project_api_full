@@ -1,9 +1,5 @@
 import { useContext } from "react";
-///Componentes
-import Popup from "../popup/Popup.jsx";
-import ScreenLoader from "../ScreenLoader/ScreenLoader.jsx";
-import API from "../../utils/api.js";
-//Forms
+
 import NewCardForm from "../popup/NewCard/NewCard.jsx";
 import EditProfileForm from "../popup/EditProfile/EditProfile.jsx";
 import EditAvatar from "../popup/EditAvatar/EditAvatar.jsx";
@@ -16,8 +12,6 @@ export default function Main(propiedades) {
   //Atributos
   const {
     handleOpenPopUp,
-    handleClosePopUp,
-    popup,
     cards,
     handlePostCard,
     handleCardLike,

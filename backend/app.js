@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+require("dotenv").config();
 
 //registro Logs
 const { requestLogger, errorLogger } = require("./middlewares/logger");
@@ -14,9 +15,17 @@ const auth = require("./middlewares/auth");
 const app = express();
 const PORT = 3001;
 app.use(cors());
+app.options("*", cors());
 mongoose.connect("mongodb://localhost:27017/aroundMongoose");
 app.use(express.json());
 app.use(requestLogger);
+
+//prueba de crasheo
+app.get("/crash-test", () => {
+  setTimeout(() => {
+    throw new Error("El servidor va a caer");
+  }, 0);
+});
 
 //Routes públicas
 app.post(
@@ -63,9 +72,7 @@ app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
   res.status(statusCode).send({
     message:
-      statusCode === 500
-        ? "Se ha producido un error en el servidor"
-        : err.message,
+      statusCode === 500 ? "Ha ocurrido un error en el servidor" : err.message,
   });
 });
 app.listen(PORT, () => {

@@ -1,13 +1,19 @@
 # Around the U.S. Auth - Autenticación y Rutas Privadas (TripleTen)
 
+## 🌐 Enlaces de la Aplicación
+
+- **Frontend (Sitio Público):** [https://aroundUSDanils.mooo.com](https://aroundUSDanils.mooo.com)
+- **Backend (API):** [https://api.aroundUSDanils.mooo.com](https://api.aroundUSDanils.mooo.com)
+
 ## 📌 Descripción del Proyecto
 
 "Around the U.S." es una aplicación web interactiva diseñada para que los usuarios puedan gestionar un perfil personal y un feed de tarjetas con fotografías de paisajes.
 
-Este proyecto representa la evolución de la aplicación original hacia una arquitectura moderna, escalable y segura. En esta nueva fase, la aplicación implementa un sistema completo de registro, inicio de sesión y protección de rutas mediante JWT (JSON Web Tokens), conectándose al backend de TripleTen para gestionar el acceso de los usuarios de forma real.
+Este proyecto representa la evolución de la aplicación original hacia una arquitectura moderna, escalable y segura. En esta nueva fase, la aplicación implementa un sistema completo de registro, inicio de sesión y protección de rutas mediante JWT (JSON Web Tokens), conectándose a una API backend propia desplegada en Google Cloud Platform para gestionar el acceso de los usuarios y la base de datos de forma real.
 
 ## 🚀 Tecnologías y Herramientas Utilizadas
 
+- **Infraestructura y Despliegue:** Servidor Ubuntu en Google Cloud Platform (GCP), Nginx como proxy inverso, PM2 para gestión de procesos, y Let's Encrypt/Certbot para certificados de seguridad SSL (HTTPS).
 - **React (JSX) & Vite:** Creación de interfaces de usuario mediante componentes modulares y entorno de desarrollo rápido.
 - **React Router DOM:** Manejo de enrutamiento del lado del cliente (SPA) y navegación programática.
 - **Context API (`CurrentUserContext`):** Gestión del estado global de la aplicación (datos del usuario logueado, cierre de sesión y funciones de la API).
@@ -20,6 +26,7 @@ Este proyecto representa la evolución de la aplicación original hacia una arqu
 
 El proyecto fue refactorizado para adoptar un enfoque declarativo y seguro, destacando las siguientes implementaciones:
 
+- **Despliegue Full-Stack:** Conexión exitosa entre el frontend en React y el backend en Node.js operando bajo el mismo servidor con subdominios configurados y seguros.
 - **Rutas Protegidas (`ProtectedRoute`):** El feed principal y la edición de perfil ahora son exclusivos para usuarios logueados. Los usuarios anónimos son redirigidos automáticamente.
 - **Sistema de Autenticación (`auth.js`):** Interacción directa con los endpoints `/signup`, `/signin` y `/users/me`.
 - **Nuevos Componentes de Auth:** Formularios reutilizables para `Login.jsx` y `Register.jsx` con validaciones de seguridad.

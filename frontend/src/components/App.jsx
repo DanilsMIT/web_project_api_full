@@ -76,7 +76,7 @@ function App() {
     } else {
       setIsLoading(false);
     }
-  }, []);
+  }, [navigate]);
 
   //Funciones API
   const handleUpdateUser = async (data) => {

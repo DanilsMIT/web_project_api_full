@@ -2,6 +2,11 @@
 
 Esta es la API RESTful para la aplicación "Around the U.S.", diseñada para gestionar usuarios, tarjetas de imágenes y sistemas de autenticación.
 
+## 🌐 Enlaces de la Aplicación
+
+- **Frontend (Sitio Público):** [https://aroundUSDanils.mooo.com]
+- **Backend (API):** [https://api.aroundUSDanils.mooo.com]
+
 ## Tecnologías Utilizadas
 
 - **Node.js & Express.js**: Entorno de ejecución y framework para el servidor.
